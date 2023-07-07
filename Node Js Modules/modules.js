@@ -104,25 +104,28 @@ const servers = net.createServer((socket) => {
   });
   
 
-// var nets = require('net');
-// var client = new nets.Socket({writable: true});
+//   const nets = require('net');
 
-// client.on('close', function() {
-//   console.log('Connection closed');
+// const client = new nets.Socket();
+
+// client.on('error', (error) => {
+//   console.error('Socket error:', error);
 // });
 
-// client.on('error', function(err) {
-//   console.error('Connection error: ' + err);
-//   console.error(new Error().stack);
+// client.connect(8080, 'localhost', () => {
+//   console.log('Connected to the server.');
+
+//   client.write('Hello, server!');
 // });
 
-// client.connect(8888, 'localhost', function() {
-//   var count = 0;
-//   console.log('Connected');
-//   for (var i = 0; i < 100000; i++) {
-//     client.write('' + i + '');
-//   }
+// client.on('data', (data) => {
+//   console.log('Received data from the server:', data.toString());
 // });
 
+// client.on('close', () => {
+//   console.log('Connection closed.');
+// });
+
+  
 
 
